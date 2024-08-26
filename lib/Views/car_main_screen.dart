@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Widgets/card_of_car.dart';
-
+import 'package:music_player/Widgets/car_model.dart';
 
 class CarMainScreen extends StatelessWidget {
   const CarMainScreen({super.key});
@@ -36,19 +35,17 @@ class CarMainScreen extends StatelessWidget {
                 topRight:Radius.circular(35),
                 )
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height:15),
-                Utils.populerViewAll(),
-                
-                const Row(
-                  children: [
-                    CarCard(),
-                    CarCard(),
-                  ],
-                )
-              ]
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height:15),
+                  Utils.populerViewAll(),
+                  carModel()
+                  
+                ]
+              ),
             )
           )
         ],

@@ -2,13 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:music_player/Controller/utils.dart';
 
 class CarCard extends StatelessWidget {
-  const CarCard({super.key});
+  final String price;
+  final String reating;
+  final String name;
+  final String image;
+  const CarCard({super.key,
+   required this.price, 
+   required this.reating, 
+   required this.name, 
+   required this.image});
 
   @override
   Widget build(BuildContext context) {
+    
     return Container(
+      padding: const EdgeInsets.all(4) ,
       margin: const EdgeInsets.all(10),
-      height: MediaQuery.of(context).size.height * 0.22,
+      height: MediaQuery.of(context).size.height * 0.255,
       width: MediaQuery.of(context).size.width * 0.44,
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
@@ -25,14 +35,25 @@ class CarCard extends StatelessWidget {
       ),
 
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('lib/Assets/image/car3.png',
-           fit: BoxFit.cover,
+          IconButton(onPressed: (){}, 
+          icon:const Icon(Icons.favorite_border,size: 15,),
+          alignment: Alignment.topLeft,
+          ),
+          Image.asset(image,
+          ),
+           
+           Center(
+             child:Text(name,
+             style:const TextStyle(
+              fontFamily: 'Bold',
+              fontSize:12,
+              color: Colors.black),
+              ),
            ),
-           const SizedBox(height: 10),
-           const Text('Tesla Model 1'),
-           Utils.priceAndReating('15,990', '4.8')
+           Utils.priceAndReating(price, reating)
         ],
       ),
     );

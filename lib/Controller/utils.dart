@@ -75,21 +75,20 @@ class Utils {
   }
 
   static populerViewAll() {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const Text(
           'Populer',
           style: TextStyle(
-            fontSize:16,
+            fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Colors.black,
             letterSpacing: 1.2,
           ),
         ),
         GestureDetector(
-          onTap: () {
-          },
+          onTap: () {},
           child: const Text(
             'View All',
             style: TextStyle(
@@ -99,48 +98,47 @@ class Utils {
               letterSpacing: 1.2,
             ),
           ),
-          ),
-          
+        ),
       ],
     );
   }
 
-  static priceAndReating(price,reating) {
-    return  Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+  static priceAndReating(price, reating) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-         Text(
+        Text(
           price,
-          style:const TextStyle(
-            fontSize:14,
+          style: const TextStyle(
+            fontSize: 10,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Colors.black54,
             letterSpacing: 1.2,
           ),
         ),
-        
         GestureDetector(
-          onTap: () {
-          },
+          onTap: () {},
           child: Row(
             children: [
-               const Icon(Icons.star,color: Colors.amber,),
-               const SizedBox(width: 8,),
-               Text(
+              const Icon(
+                Icons.star,
+                size: 15,
+                color: Colors.amber,
+              ),
+              const SizedBox(width: 5),
+              Text(
                 reating,
                 style: const TextStyle(
-                  fontSize: 12,
+                  fontSize:10,
                   fontWeight: FontWeight.w900,
-                  color: Colors.grey,
+                  color: Colors.black54,
                   letterSpacing: 1.2,
                 ),
               ),
             ],
           ),
-          ),
-          
+        ),
       ],
     );
   }
-
 }
