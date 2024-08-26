@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import 'package:music_player/Views/car_details.dart';
 
 class FeatureDetails extends StatelessWidget {
-  
+  final IconData iconNmae;
+  final String titleName;
+  final String descriptionName;
   const FeatureDetails(
-      {super.key,
+      {super.key, required this.iconNmae, required this.titleName, required this.descriptionName,
      });
 
   @override
@@ -28,8 +30,22 @@ class FeatureDetails extends StatelessWidget {
                   //spreadRadius:1.5,
                   offset: const Offset(1, 3)),
             ]),
-        child: const Column(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Icon(iconNmae, 
+            size: 20, 
+            color: Colors.black,),
+            Text(titleName, 
+             style: TextStyle(
+              fontSize: 12, 
+              color: Colors.grey.shade800),
+              ),
+              Text(descriptionName, 
+              style:const TextStyle(
+                fontSize: 16, 
+                color: Colors.black),),
           ]
         ),
       ),

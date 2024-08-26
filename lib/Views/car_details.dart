@@ -52,9 +52,21 @@ class CarDetails extends StatelessWidget {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        FeatureDetails(),
-                        FeatureDetails(),
-                        FeatureDetails(),
+                        FeatureDetails(
+                          iconNmae: Icons.chair_outlined,
+                          titleName: 'Total\nCapacity',
+                          descriptionName: '6 Sets',
+                        ),
+                        FeatureDetails(
+                          iconNmae: Icons.speed_sharp,
+                          titleName: 'Highest\nSpeed',
+                          descriptionName: '200 KM/H',
+                        ),
+                        FeatureDetails(
+                          iconNmae: Icons.energy_savings_leaf_outlined,
+                          titleName: 'Engine\nOutput',
+                          descriptionName: '500 HP',
+                        ),
                       ],
                     ),
                     Row(
