@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Utils {
   static listProInfo() {
@@ -142,5 +143,44 @@ class Utils {
       ],
     );
   }
-
+  
+  static appbarCustom(){
+   return Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.grey.shade400,
+                  child: IconButton(
+                      onPressed: () => Get.back(),
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      )),
+                ),
+                const Text(
+                  'Car Details',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: 'Bold',
+                    color: Colors.white,
+                    letterSpacing: 1.4,
+                  ),
+                ),
+                CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.grey.shade400,
+                  child: IconButton(
+                      onPressed: () => Get.back(),
+                      icon: const Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      )),
+                )
+              ],
+            ),
+          );
+  }
 }

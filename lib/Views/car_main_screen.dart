@@ -35,7 +35,6 @@ class CarMainScreen extends StatelessWidget {
                   const SizedBox(height:15),
                   Utils.populerViewAll(),
                   carModel()
-                  
                 ]
               ),
             )
