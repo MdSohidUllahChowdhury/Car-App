@@ -6,7 +6,7 @@ class Utils {
       contentPadding: const EdgeInsets.only(top: 8),
       leading: const CircleAvatar(
         radius: 30,
-        backgroundImage: AssetImage('lib/Assets/image/car5.png'),
+        backgroundImage: AssetImage('lib/Assets/image/logo2.png'),
       ),
       title: const Text(
         'Hello',
@@ -14,7 +14,7 @@ class Utils {
           fontSize: 12,
           fontWeight: FontWeight.w600,
           color: Colors.black,
-          letterSpacing: 1.2,
+          letterSpacing: 1.5,
         ),
       ),
       subtitle: const Text(
@@ -27,7 +27,7 @@ class Utils {
             fontFamily: 'Bold'),
       ),
       trailing: CircleAvatar(
-          radius: 25,
+          radius: 23,
           backgroundColor: Colors.white,
           child: Icon(
             Icons.favorite_border,
@@ -43,20 +43,20 @@ class Utils {
       decoration: BoxDecoration(
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(24)),
       child: ListTile(
-        contentPadding: const EdgeInsets.all(10),
+        contentPadding: const EdgeInsets.all(8),
         leading: const Icon(
           Icons.search,
           size: 25,
         ),
         title: const Text(
-          'Search',
+          'S e a r c h',
         ),
         trailing: CircleAvatar(
             radius: 25,
             backgroundColor: Colors.lightBlueAccent.shade400,
             child: const Icon(
               Icons.equalizer_rounded,
-              size: 25,
+              size: 28,
               color: Colors.white,
             )),
       ),
@@ -82,9 +82,10 @@ class Utils {
           'Populer',
           style: TextStyle(
             fontSize: 16,
+            fontFamily: 'Bold',
             fontWeight: FontWeight.bold,
             color: Colors.black,
-            letterSpacing: 1.2,
+            letterSpacing: 1.4,
           ),
         ),
         GestureDetector(
@@ -129,7 +130,7 @@ class Utils {
               Text(
                 reating,
                 style: const TextStyle(
-                  fontSize:10,
+                  fontSize: 10,
                   fontWeight: FontWeight.w900,
                   color: Colors.black54,
                   letterSpacing: 1.2,
@@ -141,4 +142,5 @@ class Utils {
       ],
     );
   }
+
 }

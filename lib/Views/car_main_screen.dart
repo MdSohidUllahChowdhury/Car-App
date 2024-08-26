@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Widgets/car_model.dart';
+import 'package:music_player/Model/car_model.dart';
+import 'package:music_player/Model/carlogo_model.dart';
 
 class CarMainScreen extends StatelessWidget {
   const CarMainScreen({super.key});
@@ -15,16 +16,7 @@ class CarMainScreen extends StatelessWidget {
           Utils.listProInfo(),
           Utils.listSearchInfo(),
           const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Utils.carCategory('lib/Assets/image/logo1.png'),
-              Utils.carCategory('lib/Assets/image/logo2.png'),
-              Utils.carCategory('lib/Assets/image/logo3.png'),
-              Utils.carCategory('lib/Assets/image/logo4.png'),
-              Utils.carCategory('lib/Assets/image/logo5.png'),
-            ],
-          ),
+          carLogo(),
           const SizedBox(height: 25),
           Container(
             height: MediaQuery.of(context).size.height * 0.62,
