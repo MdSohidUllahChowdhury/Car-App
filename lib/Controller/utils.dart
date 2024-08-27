@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:music_player/Views/profile.dart';
 
 class Utils {
   static listProInfo() {
     return ListTile(
-      contentPadding: const EdgeInsets.only(top: 8),
-      leading: const CircleAvatar(
+      contentPadding: const EdgeInsets.only(top: 8,left: 6,right: 6),
+      leading: CircleAvatar(
         radius: 30,
-        backgroundImage: AssetImage('lib/Assets/image/logo2.png'),
+        backgroundImage:const AssetImage('lib/Assets/image/profile.png'),
+        child: InkWell(
+          onTap: () => Get.to(const Profile()),
+        ),
       ),
       title: const Text(
         'Hello',
@@ -144,15 +148,15 @@ class Utils {
     );
   }
   
-  static appbarCustom(){
+  static appbarCustom(barName){
    return Padding(
-            padding: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 10,left: 15,right: 15),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade700,
                   child: IconButton(
                       onPressed: () => Get.back(),
                       icon: const Icon(
@@ -160,9 +164,9 @@ class Utils {
                         color: Colors.white,
                       )),
                 ),
-                const Text(
-                  'Car Details',
-                  style: TextStyle(
+                 Text(
+                  barName,
+                  style:const TextStyle(
                     fontSize: 16,
                     fontFamily: 'Bold',
                     color: Colors.white,
@@ -171,9 +175,9 @@ class Utils {
                 ),
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: Colors.grey.shade400,
+                  backgroundColor: Colors.grey.shade700,
                   child: IconButton(
-                      onPressed: () => Get.back(),
+                      onPressed: (){},
                       icon: const Icon(
                         Icons.favorite,
                         color: Colors.white,
@@ -223,4 +227,6 @@ class Utils {
       ],
     );
   }
+   
+   
 }

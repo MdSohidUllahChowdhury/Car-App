@@ -14,7 +14,7 @@ class CarDetails extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Utils.appbarCustom(),
+          Utils.appbarCustom('Car Details'),
           Image.asset(
             'lib/Assets/image/car2.png',
             height: 198,
