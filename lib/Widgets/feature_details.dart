@@ -17,8 +17,8 @@ class FeatureDetails extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(4),
         margin: const EdgeInsets.all(4.5),
-        height: MediaQuery.of(context).size.height * 0.22,
-        width: MediaQuery.of(context).size.width * 0.3,
+        height: MediaQuery.of(context).size.height * 0.21,
+        width: MediaQuery.of(context).size.width * 0.28,
         decoration: BoxDecoration(
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(16),
@@ -27,7 +27,6 @@ class FeatureDetails extends StatelessWidget {
                   blurRadius: 2,
                   color: Colors.grey.shade400,
                   blurStyle: BlurStyle.outer,
-                  //spreadRadius:1.5,
                   offset: const Offset(1, 3)),
             ]),
         child: Column(
@@ -39,13 +38,14 @@ class FeatureDetails extends StatelessWidget {
             color: Colors.black,),
             Text(titleName, 
              style: TextStyle(
-              fontSize: 12, 
+              fontSize: 13, 
               color: Colors.grey.shade800),
               ),
               Text(descriptionName, 
               style:const TextStyle(
                 fontSize: 16, 
-                color: Colors.black),),
+                color: Colors.black,
+                fontWeight: FontWeight.bold),),
           ]
         ),
       ),

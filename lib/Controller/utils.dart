@@ -183,4 +183,44 @@ class Utils {
             ),
           );
   }
+
+   static carNameAndReating(carname, reating) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          carname,
+          style: const TextStyle(
+            fontSize: 16,
+            fontFamily: 'Bold',
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            letterSpacing: 1.2,
+          ),
+        ),
+        GestureDetector(
+          onTap: () {},
+          child: Row(
+            children: [
+              const Icon(
+                Icons.star,
+                size: 17,
+                color: Colors.amber,
+              ),
+              const SizedBox(width: 5),
+              Text(
+                reating,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.black,
+                  letterSpacing: 1.2,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }
