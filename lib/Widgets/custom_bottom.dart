@@ -18,11 +18,15 @@ class CustomBottom extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.grey.shade300),
           elevation: MaterialStateProperty.all(0),
-          minimumSize: MaterialStateProperty.all<Size>(const Size(290, 60)),
+          minimumSize: MaterialStateProperty.all<Size>(const Size(280, 60)),
         ),
-        child: Row(
+        child: Row(mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Icon(iconName,color: Colors.black,),
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: Colors.grey.shade200,
+              child: Icon(iconName,color: Colors.black,),
+            ),
             const SizedBox(
               width: 20,
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Views/car_main_screen.dart';
+import 'package:music_player/Views/payment.dart';
 import 'package:music_player/Widgets/feature_details.dart';
 
 class CarDetails extends StatelessWidget {
@@ -90,7 +90,7 @@ class CarDetails extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {
                             Get.offAll(
-                              () => const CarMainScreen(),
+                              () => const Payment(),
                               transition: Transition.leftToRight,
                             );
                           },
