@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Views/payment.dart';
-import 'package:music_player/Widgets/feature_details.dart';
+import 'package:car_app/Controller/utils.dart';
+import 'package:car_app/Views/payment.dart';
+import 'package:car_app/Widgets/feature_details.dart';
 
 class CarDetails extends StatelessWidget {
   final String image, brandName, reating, priceCar;
@@ -34,7 +34,8 @@ class CarDetails extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
                   topRight: Radius.circular(35),
-                )),
+                 )
+                ),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +45,7 @@ class CarDetails extends StatelessWidget {
                   const SizedBox(height: 5),
                   Text(
                     'Features',
-                    style: TextStyle(
+                      style: TextStyle(
                       fontSize: 18,
                       color: Colors.grey.shade800,
                       fontFamily: 'Bold',
@@ -53,7 +54,7 @@ class CarDetails extends StatelessWidget {
                   ),
                   Text(
                     'esis Moom 3 is an all deckric compact socan.\noroduced by les a. inc. it is desioned to... more',
-                    style: TextStyle(
+                      style: TextStyle(
                       fontSize: 10,
                       color: Colors.grey.shade800,
                       letterSpacing: 1.2,
@@ -114,8 +115,9 @@ class CarDetails extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
-                ]),
+                )
+              ]
+            ),
           )
         ],
       ),

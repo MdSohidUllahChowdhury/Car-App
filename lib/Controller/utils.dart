@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music_player/Views/my_cart.dart';
-import 'package:music_player/Views/profile.dart';
+import 'package:car_app/Views/my_cart.dart';
+import 'package:car_app/Views/profile.dart';
 
 class Utils {
   static listProInfo() {

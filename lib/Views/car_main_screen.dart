@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Model/carlogo_model.dart';
-import 'package:music_player/Widgets/card_of_car.dart';
+import 'package:car_app/Controller/utils.dart';
+import 'package:car_app/Model/carlogo_model.dart';
+import 'package:car_app/Widgets/card_of_car.dart';
 
 
 class CarMainScreen extends StatelessWidget {
@@ -28,17 +28,18 @@ class CarMainScreen extends StatelessWidget {
                   ),
               height: MediaQuery.of(context).size.height * 0.64,
               child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 15),
-                        Utils.populerViewAll(),
-                        const CarCard(),
-                      ]
-                    )
-                  )
-                ),
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 15),
+                      Utils.populerViewAll(),
+                      const CarCard(),
+                      
+                  ]
+                )
+              )
+            ),
           ]
         )
      );

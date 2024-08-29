@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Model/model_list.dart';
-import 'package:music_player/Views/car_details.dart';
+import 'package:car_app/Controller/utils.dart';
+import 'package:car_app/Model/model_list.dart';
+import 'package:car_app/Views/car_details.dart';
 
 class CarCard extends StatelessWidget {
   const CarCard(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Controller/utils.dart';
+import 'package:car_app/Controller/utils.dart';
 
 Widget carLogo(){
   return Row(

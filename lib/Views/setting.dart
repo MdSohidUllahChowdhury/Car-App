@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music_player/Controller/utils.dart';
-import 'package:music_player/Widgets/custom_bottom.dart';
+import 'package:car_app/Controller/utils.dart';
+import 'package:car_app/Widgets/custom_bottom.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
@@ -11,13 +11,13 @@ class Setting extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey.shade800,
         body: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Utils.appbarCustom('Profile'),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               CustomBottom(
                 nameTheBottom: 'Setting',
@@ -38,32 +38,8 @@ class Setting extends StatelessWidget {
                 nameTheBottom: 'Setting',
                 iconName: Icons.settings,
                 routName: () => Get.to(const Setting()),
-              ),
-              CustomBottom(
-                nameTheBottom: 'My Car',
-                iconName: Icons.car_repair,
-                routName: () => Get.back(),
-              ),
-              CustomBottom(
-                nameTheBottom: 'Social Media Links',
-                iconName: Icons.share,
-                routName: () => Get.back(),
-              ),
-              CustomBottom(
-                nameTheBottom: 'Setting',
-                iconName: Icons.settings,
-                routName: () => Get.to(const Setting()),
-              ),
-              CustomBottom(
-                nameTheBottom: 'My Car',
-                iconName: Icons.car_repair,
-                routName: () => Get.back(),
-              ),
-              CustomBottom(
-                nameTheBottom: 'Social Media Links',
-                iconName: Icons.share,
-                routName: () => Get.back(),
-              ),
+              )
+             
             ],
           ),
         ));

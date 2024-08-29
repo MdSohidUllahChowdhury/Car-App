@@ -14,7 +14,7 @@ class CustomBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: routName,
+        onPressed: routName,onHover: (value) => Colors.greenAccent,
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.grey.shade300),
           elevation: MaterialStateProperty.all(0),
