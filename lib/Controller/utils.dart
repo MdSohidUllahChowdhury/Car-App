@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:music_player/Views/my_cart.dart';
 import 'package:music_player/Views/profile.dart';
 
 class Utils {
@@ -34,11 +35,14 @@ class Utils {
       trailing: CircleAvatar(
           radius: 23,
           backgroundColor: Colors.white,
-          child: Icon(
-            Icons.favorite_border,
+          child: IconButton(
+          onPressed: () => Get.to(const MyCart()),
+           icon:Icon(Icons.add_shopping_cart,
             size: 25,
             color: Colors.grey.shade800,
-          )),
+            )
+           )
+          ),
     );
   }
 
