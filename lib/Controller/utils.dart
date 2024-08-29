@@ -158,7 +158,9 @@ class Utils {
                   radius: 25,
                   backgroundColor: Colors.grey.shade700,
                   child: IconButton(
-                      onPressed: () => Get.back(),
+                      onPressed: () {
+                        Get.back();
+                      },
                       icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.white,
@@ -227,6 +229,5 @@ class Utils {
       ],
     );
   }
-   
-   
+     
 }

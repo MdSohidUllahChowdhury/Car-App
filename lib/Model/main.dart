@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/Views/welcome_page.dart';
 
+
 void main (){
   runApp(const CarApp());
 }

@@ -1,29 +1,73 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/Controller/utils.dart';
+import 'package:music_player/Model/model_list.dart';
 import 'package:music_player/Views/car_details.dart';
 
 class CarCard extends StatelessWidget {
-  final String price;
-  final String reating;
-  final String name;
-  final String image;
   const CarCard(
-      {super.key,
-      required this.price,
-      required this.reating,
-      required this.name,
-      required this.image});
+      {super.key});
 
   @override
   Widget build(BuildContext context) {
+    List <ModelList> productItem = [
+     const ModelList(
+        price:'\$22,899' , 
+        reating: '4.8', 
+        name: 'BMW Mz5', 
+        image: 'lib/Assets/image/car2.png'
+        ),
+     const ModelList(
+        price:'\$45,899' , 
+        reating: '4.7', 
+        name: 'Toyota', 
+        image: 'lib/Assets/image/car3.png'
+        ),
+     const ModelList(
+        price:'\$30,599' , 
+        reating: '4.4', 
+        name: 'Masdza Xr2', 
+        image: 'lib/Assets/image/car4.png'
+        ),
+     const ModelList(
+        price:'\$80,000' , 
+        reating: '4.9', 
+        name: 'Leambergini', 
+        image: 'lib/Assets/image/car5.png'
+        ),
+     const ModelList(
+        price:'\$18,499' , 
+        reating: '4.8', 
+        name: 'Marsedi M5X', 
+        image: 'lib/Assets/image/car1.png'
+        ),
+    ];
+    return GridView.builder(
+      shrinkWrap: true,
+      primary: false,
+      gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing:5,
+         mainAxisSpacing:3,
+         childAspectRatio:.87
+          ),
+          itemCount: productItem.length,
+          itemBuilder: (context, index) {
+            final iteam = productItem[index];
+
     return InkWell(
-      onTap: () => Get.to(const CarDetails()),
+      onTap: () => Get.to(CarDetails(
+        image: iteam.image,
+        brandName: iteam.name,
+        reating: iteam.reating,
+        priceCar: iteam.price,
+         )
+        ),
       child: Container(
         padding: const EdgeInsets.all(4),
-        margin: const EdgeInsets.all(10),
-        height: MediaQuery.of(context).size.height * 0.255,
-        width: MediaQuery.of(context).size.width * 0.44,
+        margin: const EdgeInsets.all(5),
+        //height: MediaQuery.of(context).size.height * 0.40,
+        //width: MediaQuery.of(context).size.width * 0.44,
         decoration: BoxDecoration(
             color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(16),
@@ -32,11 +76,10 @@ class CarCard extends StatelessWidget {
                   blurRadius: 2,
                   color: Colors.grey.shade400,
                   blurStyle: BlurStyle.outer,
-                  //spreadRadius:1.5,
                   offset: const Offset(1, 3)),
             ]),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+         mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             IconButton(
@@ -48,11 +91,11 @@ class CarCard extends StatelessWidget {
               alignment: Alignment.topLeft,
             ),
             Image.asset(
-              image,
+              iteam.image,
             ),
             Center(
               child: Text(
-                name,
+                iteam.name,
                 style: const TextStyle(
                     fontFamily: 'Bold', 
                     fontSize: 12, 
@@ -60,10 +103,13 @@ class CarCard extends StatelessWidget {
                     ),
               ),
             ),
-            Utils.priceAndReating(price, reating)
+            Utils.priceAndReating(iteam.price, iteam.reating)
           ],
         ),
       ),
     );
+          },
+      
+      );
   }
 }
