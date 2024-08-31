@@ -11,7 +11,7 @@ class Utils {
         radius: 30,
         backgroundImage:const AssetImage('lib/Assets/image/profile.png'),
         child: InkWell(
-          onTap: () => Get.to(const Profile()),
+          onTap: () => Get.to(() =>const Profile()),
         ),
       ),
       title: const Text(
@@ -35,14 +35,20 @@ class Utils {
       trailing: CircleAvatar(
           radius: 23,
           backgroundColor: Colors.white,
-          child: IconButton(
-          onPressed: () => Get.to(const MyCart()),
-           icon:Icon(Icons.add_shopping_cart,
-            size: 25,
-            color: Colors.grey.shade800,
-            )
+          child: 
+             IconButton(
+             onPressed: () => Get.to(() => const MyCart ()),
+             icon:Badge(
+              label:const Text('0'),
+              child: Icon(
+               Icons.add_shopping_cart,
+               size: 25,
+               color: Colors.grey.shade800,
+               )
+             )
            )
-          ),
+         
+      ),
     );
   }
 
@@ -121,8 +127,8 @@ class Utils {
           price,
           style: const TextStyle(
             fontSize: 10,
-            fontWeight: FontWeight.bold,
-            color: Colors.black54,
+            fontWeight: FontWeight.w700,
+            color: Colors.black,
             letterSpacing: 1.2,
           ),
         ),
@@ -140,8 +146,8 @@ class Utils {
                 reating,
                 style: const TextStyle(
                   fontSize: 10,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.black54,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
                   letterSpacing: 1.2,
                 ),
               ),
