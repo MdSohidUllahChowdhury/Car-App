@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:car_app/Controller/utils.dart';
-import 'package:car_app/Model/carlogo_model.dart';
+import 'package:car_app/Model/car_logo_model.dart';
 import 'package:car_app/Widgets/card_of_car.dart';
 
 
