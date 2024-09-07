@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:car_app/Views/my_cart.dart';
 import 'package:car_app/Views/profile.dart';
 
-class Utils {
+class Utils{
+  
   static listProInfo() {
     return ListTile(
       contentPadding: const EdgeInsets.only(top: 8,left: 6,right: 6),
