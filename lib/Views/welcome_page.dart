@@ -56,10 +56,9 @@ class WelcomeScreen extends StatelessWidget {
                     );
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    elevation: MaterialStateProperty.all(0),
-                    minimumSize:
-                        MaterialStateProperty.all<Size>(const Size(280, 55)),
+                    backgroundColor: WidgetStateProperty.all(Colors.white),
+                    elevation: WidgetStateProperty.all(0),
+                    minimumSize:WidgetStateProperty.all<Size>(const Size(280, 55)),
                   ),
                   child: const Text(
                     'Get Started',

@@ -1,7 +1,7 @@
+import 'package:car_app/Model/iteam_room.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:car_app/Controller/utils.dart';
-import 'package:car_app/Model/model_list.dart';
 import 'package:car_app/Views/car_details.dart';
 
 class CarCard extends StatelessWidget {
@@ -9,39 +9,8 @@ class CarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    List<ModelList> productItem = [
-      const ModelList(
-          id: '1',
-          price: '\$22,899',
-          reating: '4.8',
-          name: 'BMW Mz5',
-          image: 'lib/Assets/image/car2.png'),
-      const ModelList(
-          id: '2',
-          price: '\$45,899',
-          reating: '4.7',
-          name: 'Toyota',
-          image: 'lib/Assets/image/car3.png'),
-      const ModelList(
-          id: '3',
-          price: '\$30,599',
-          reating: '4.4',
-          name: 'Masdza Xr2',
-          image: 'lib/Assets/image/car4.png'),
-      const ModelList(
-          id: '4',
-          price: '\$80,000',
-          reating: '4.9',
-          name: 'Leambergini',
-          image: 'lib/Assets/image/car5.png'),
-      const ModelList(
-          id: '5',
-          price: '\$18,499',
-          reating: '4.8',
-          name: 'Marsedi M5X',
-          image: 'lib/Assets/image/car1.png'),
-    ];
+
+    final productIteam = addOnIteams;
     
     return GridView.builder(
       shrinkWrap: true,
@@ -51,9 +20,9 @@ class CarCard extends StatelessWidget {
           crossAxisSpacing: 5,
           mainAxisSpacing: 3,
           childAspectRatio: .87),
-      itemCount: productItem.length,
+      itemCount: productIteam.length,
       itemBuilder: (context, index) {
-        final iteam = productItem[index];
+        final iteam = productIteam[index];
         return InkWell(
           onTap: () => Get.to(() => CarDetails(
                 image: iteam.image,
@@ -80,16 +49,8 @@ class CarCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                IconButton(
-                  onPressed: () {
-                    
-                  },
-                  icon: const Icon(
-                    Icons.favorite_border,
-                    size: 15,
-                  ),
-                  alignment: Alignment.topLeft,
-                ),
+               IconButton(onPressed:(){},
+               icon:const Icon(Icons.favorite_border_rounded),alignment: Alignment.topLeft,),
                 Image.asset(
                   iteam.image,
                 ),
@@ -103,6 +64,7 @@ class CarCard extends StatelessWidget {
                   ),
                 ),
                 Utils.priceAndReating(iteam.price, iteam.reating),
+                
               ],
             ),
           ),

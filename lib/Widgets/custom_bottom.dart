@@ -16,9 +16,9 @@ class CustomBottom extends StatelessWidget {
       child: ElevatedButton(
         onPressed: routName,
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.grey.shade300),
-          elevation: MaterialStateProperty.all(0),
-          minimumSize: MaterialStateProperty.all<Size>(const Size(280, 60)),
+          backgroundColor: WidgetStateProperty.all(Colors.grey.shade300),
+          elevation: WidgetStateProperty.all(0),
+          minimumSize: WidgetStateProperty.all<Size>(const Size(280, 60)),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.start,
           children: [

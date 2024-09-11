@@ -103,9 +103,9 @@ class CarDetails extends StatelessWidget {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.grey.shade800),
-                              elevation: MaterialStateProperty.all(0),
-                              minimumSize: MaterialStateProperty.all<Size>(
+                                  WidgetStateProperty.all(Colors.grey.shade800),
+                              elevation: WidgetStateProperty.all(0),
+                              minimumSize: WidgetStateProperty.all<Size>(
                                   const Size(220, 55)),
                             ),
                             child: const Text(
