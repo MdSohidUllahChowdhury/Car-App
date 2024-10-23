@@ -9,9 +9,8 @@ class CarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final productIteam = addOnIteams;
-    
+
     return GridView.builder(
       shrinkWrap: true,
       primary: false,
@@ -33,8 +32,6 @@ class CarCard extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(4),
             margin: const EdgeInsets.all(5),
-            //height: MediaQuery.of(context).size.height * 0.40,
-            //width: MediaQuery.of(context).size.width * 0.44,
             decoration: BoxDecoration(
                 color: Colors.grey.shade300,
                 borderRadius: BorderRadius.circular(24),
@@ -49,8 +46,11 @@ class CarCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-               IconButton(onPressed:(){},
-               icon:const Icon(Icons.favorite_border_rounded),alignment: Alignment.topLeft,),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.favorite_border_rounded),
+                  alignment: Alignment.topLeft,
+                ),
                 Image.asset(
                   iteam.image,
                 ),
@@ -58,13 +58,10 @@ class CarCard extends StatelessWidget {
                   child: Text(
                     iteam.name,
                     style: const TextStyle(
-                        fontFamily: 'Bold',
-                        fontSize: 12,
-                        color: Colors.black),
+                        fontFamily: 'Bold', fontSize: 12, color: Colors.black),
                   ),
                 ),
                 Utils.priceAndReating(iteam.price, iteam.reating),
-                
               ],
             ),
           ),

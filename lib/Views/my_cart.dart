@@ -30,13 +30,16 @@ class MyCart extends StatelessWidget {
                   ]),
               child: Row(
                 children: [
-                  Image.asset('lib/Assets/image/car3.png',height: 100,),
+                  Image.asset(
+                    'lib/Assets/image/car3.png',
+                    height: 100,
+                  ),
                   const SizedBox(width: 20),
                   const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(
-                        'Porses',
+                        'Toyota',
                         style: TextStyle(
                             fontFamily: 'Bold',
                             fontSize: 14,
@@ -59,7 +62,7 @@ class MyCart extends StatelessWidget {
                     ],
                   )
                 ],
-              ))
+              )),
         ],
       ),
     );

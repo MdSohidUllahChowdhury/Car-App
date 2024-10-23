@@ -3,16 +3,15 @@ import 'package:get/get.dart';
 import 'package:car_app/Views/my_cart.dart';
 import 'package:car_app/Views/profile.dart';
 
-class Utils{
-  
+class Utils {
   static listProInfo() {
     return ListTile(
-      contentPadding: const EdgeInsets.only(top: 8,left: 6,right: 6),
+      contentPadding: const EdgeInsets.only(top: 8, left: 6, right: 6),
       leading: CircleAvatar(
         radius: 30,
-        backgroundImage:const AssetImage('lib/Assets/image/profile.png'),
+        backgroundImage: const AssetImage('lib/Assets/image/profile.png'),
         child: InkWell(
-          onTap: () => Get.to(() =>const Profile()),
+          onTap: () => Get.to(() => const Profile()),
         ),
       ),
       title: const Text(
@@ -34,22 +33,20 @@ class Utils{
             fontFamily: 'Bold'),
       ),
       trailing: CircleAvatar(
-          radius: 23,
+          radius: 20,
           backgroundColor: Colors.white,
-          child: 
-             IconButton(
-             onPressed: () => Get.to(() => const MyCart ()),
-             icon:Badge(
-              label:const Text('0'),
-              child: Icon(
-               Icons.add_shopping_cart,
-               size: 25,
-               color: Colors.grey.shade800,
-               )
-             )
-           )
-         
-      ),
+          child: IconButton(
+              onPressed: () => Get.to(() => const MyCart()),
+              icon: Badge(
+                  label: const Text(
+                    '0',
+                    style: TextStyle(fontSize: 8),
+                  ),
+                  child: Icon(
+                    Icons.add_shopping_cart,
+                    size: 25,
+                    color: Colors.grey.shade800,
+                  )))),
     );
   }
 
@@ -59,6 +56,7 @@ class Utils{
       decoration: BoxDecoration(
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(24)),
       child: ListTile(
+        onTap: () {},
         contentPadding: const EdgeInsets.all(8),
         leading: const Icon(
           Icons.search,
@@ -72,14 +70,14 @@ class Utils{
             backgroundColor: Colors.lightBlueAccent.shade400,
             child: const Icon(
               Icons.equalizer_rounded,
-              size: 28,
+              size: 25,
               color: Colors.white,
             )),
       ),
     );
   }
 
-  static carCategory(imagepath) {
+  static carLogoImagePath(imagepath) {
     return CircleAvatar(
       radius: 30,
       backgroundColor: Colors.black,
@@ -158,50 +156,50 @@ class Utils{
       ],
     );
   }
-  
-  static appbarCustom(barName){
-   return Padding(
-            padding: const EdgeInsets.only(top: 10,left: 15,right: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CircleAvatar(
-                  radius: 25,
-                  backgroundColor: Colors.grey.shade700,
-                  child: IconButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      )),
-                ),
-                 Text(
-                  barName,
-                  style:const TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'Bold',
-                    color: Colors.white,
-                    letterSpacing: 1.4,
-                  ),
-                ),
-                CircleAvatar(
-                  radius: 25,
-                  backgroundColor: Colors.grey.shade700,
-                  child: IconButton(
-                      onPressed: (){},
-                      icon: const Icon(
-                        Icons.favorite,
-                        color: Colors.white,
-                      )),
-                )
-              ],
+
+  static appbarCustom(barName) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          CircleAvatar(
+            radius: 25,
+            backgroundColor: Colors.grey.shade700,
+            child: IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                )),
+          ),
+          Text(
+            barName,
+            style: const TextStyle(
+              fontSize: 16,
+              fontFamily: 'Bold',
+              color: Colors.white,
+              letterSpacing: 1.4,
             ),
-          );
+          ),
+          CircleAvatar(
+            radius: 25,
+            backgroundColor: Colors.grey.shade700,
+            child: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.favorite,
+                  color: Colors.white,
+                )),
+          )
+        ],
+      ),
+    );
   }
 
-   static carNameAndReating(carname, reating) {
+  static carNameAndReating(carname, reating) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
