@@ -36,17 +36,15 @@ class Utils {
           radius: 20,
           backgroundColor: Colors.white,
           child: IconButton(
-              onPressed: () => Get.to(() => const MyCart()),
-              icon: Badge(
-                  label: const Text(
-                    '0',
-                    style: TextStyle(fontSize: 8),
+              onPressed: (){
+                Get.to(() =>const MyCart());},
+              icon: Icon(
+                Icons.add_shopping_cart,
+                size: 25,
+                color: Colors.grey.shade800,
+              )
+                  )
                   ),
-                  child: Icon(
-                    Icons.add_shopping_cart,
-                    size: 25,
-                    color: Colors.grey.shade800,
-                  )))),
     );
   }
 

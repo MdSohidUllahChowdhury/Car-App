@@ -14,8 +14,8 @@ class ViewAll extends StatelessWidget {
         body: Column(
           children: [
             Utils.listSearchInfo(),
-            Expanded(
-              child: const TabBar(
+            const Expanded(
+              child: TabBar(
                   // indicatorSize: TabBarIndicatorSize.tab,
                   tabs: [
                     Tab(

@@ -24,7 +24,7 @@ class CarDetails extends StatelessWidget {
             Utils.appbarCustom('Car Details'),
             Image.asset(
               image,
-              height:220,
+              height: 220,
               fit: BoxFit.fitWidth,
             ),
             Expanded(
@@ -36,8 +36,7 @@ class CarDetails extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(35),
                       topRight: Radius.circular(35),
-                     )
-                    ),
+                    )),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +46,7 @@ class CarDetails extends StatelessWidget {
                       const SizedBox(height: 5),
                       Text(
                         '  Features',
-                          style: TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           color: Colors.grey.shade800,
                           fontFamily: 'Bold',
@@ -56,7 +55,7 @@ class CarDetails extends StatelessWidget {
                       ),
                       Text(
                         '  esis Moom 3 is an all deckric compact socan.\n  oroduced by les a. inc. it is desioned to... more',
-                          style: TextStyle(
+                        style: TextStyle(
                           fontSize: 10,
                           color: Colors.grey.shade800,
                           letterSpacing: 1.2,
@@ -117,9 +116,8 @@ class CarDetails extends StatelessWidget {
                             ),
                           ),
                         ],
-                    )
-                  ]
-                ),
+                      )
+                    ]),
               ),
             )
           ],
